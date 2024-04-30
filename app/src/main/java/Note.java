@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class Note {
     public final String ID = hashID();
-    private String title;
-    private String content;
+    private final String title;
+    private String content = "";
 
     public Note(String title, String content) {
         this.title = title;
@@ -44,6 +44,6 @@ public class Note {
 
     @Override
     public String toString() {
-        return "ID: %s\nTitle: %s\nContent: %s".formatted(this.ID, this.title, this.content);
+        return "ID: %s\nTitle: %s\nContent:\n%s".formatted(this.ID, this.title, this.content);
     }
 }
